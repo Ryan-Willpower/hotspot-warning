@@ -1,0 +1,167 @@
+/* table of content (press ctrl+f to find index)
+1. global css
+2. defined
+3. functional css
+4. other rule */
+
+/* 1. global css */
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  min-height: 100%;
+}
+
+/* 2. defined */
+img.background {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  border-radius: 10px;
+  height: 80%;
+  width: 80vw;
+  padding: 10px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.bg-gray {
+  background: #ffffff6b;
+}
+
+.text {
+  line-height: 140%;
+}
+
+.text-warning {
+  color: #00AAFF;
+  font-size: 2.5rem;
+}
+
+.text-danger {
+  color: #FF0000;
+  font-size: 1.3rem;
+}
+
+.text-eng {
+  color: #A2A71C;
+  font-size: 1.1rem;
+}
+
+.link {
+  margin: 0 auto;
+}
+
+/* damn button, cost me about 2 hour */
+a.button {
+  display: inline-block; /* so button should have correct width */
+  margin-top: 20px;
+  padding: 15px 20px;
+  color: #EF4136;
+  border-radius: 30px;
+  border: 1px solid #FF7272;
+  text-decoration: none;
+  background-color: rgba(255,255,255, 0);
+  cursor: pointer;
+  outline: none; /* when focus, nothing should happen */
+}
+
+a.button:visited {
+  color: #EF4136;
+}
+
+div.information {
+  margin-top: 2vh;
+}
+
+div.information > img:first-child {
+  margin-right: 4vw;
+  width: 150px;
+}
+
+div.information > img:last-child {
+  width: 120px;
+}
+
+/* 3. functional css */
+.flex {
+  display: flex;
+}
+
+.flex-y {
+  flex-direction: column;
+}
+
+.xy-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+/* 4. other rule */
+@media screen and (max-width: 991.98px) {
+  img.logo {
+    width: 100px;
+  }
+
+  .text {
+    line-height: 150%;
+  }
+
+  .text-warning {
+    font-size: 1.2rem;
+  }
+
+  .text-danger, .text-eng {
+    font-size: 0.7rem;
+  }
+
+  a.button {
+    font-size: 0.6rem;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  div.information > img:first-child {
+    width: 90px;
+  }
+  
+  div.information > img:last-child {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+@media screen and (min-width: 576px) {
+  img.logo {
+    width: 160px;
+  }
+}
