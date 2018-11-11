@@ -32,7 +32,9 @@ img.background {
 }
 
 .container {
-  border-radius: 10px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
   height: 80%;
   width: 80vw;
   padding: 10px;
@@ -73,12 +75,17 @@ a.button {
   margin-top: 20px;
   padding: 15px 20px;
   color: #EF4136;
-  border-radius: 30px;
+  -webkit-border-radius: 30px;
+     -moz-border-radius: 30px;
+          border-radius: 30px;
   border: 1px solid #FF7272;
   text-decoration: none;
   background-color: rgba(255,255,255, 0);
   cursor: pointer;
   outline: none; /* when focus, nothing should happen */
+  -webkit-transition: background-color 300ms ease;
+  -o-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
 }
 
@@ -105,16 +112,34 @@ div.information > img:last-child {
 
 /* 3. functional css */
 .flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-y {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .xy-center {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text-center {
